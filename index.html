@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirm</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        @font-face {
+            font-family: sfpro;
+            src: url("./SF-Pro-Text-Regular.otf");
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 0.5fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            place-items: center;
+        }
+
+        body {
+            perspective: 300px;
+        }
+
+        /* .yyy{
+            transform: rotateX(15deg);
+        } */
+        .texts {
+            color: transparent;
+            background: linear-gradient(90deg, #444444, #444, #e5e5e5, #444);
+            background-clip: text;
+            background-position: 200% 0%;
+            background-size: 200%;
+            animation: hello linear infinite 7s;
+        }
+
+        @keyframes hello {
+
+
+            100% {
+                background-position: -200% 0%;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body
+    class="bg-[#333] mx-auto text-[#e5e5e5] sm:max-w-sm overflow-x-hidden font-[sfpro] pt-4 flex relative overflow-hidden min-h-screen justify-between items-center relative w-full flex-col ">
+    <div class="overplay duration-400 fixed min-h-screen w-screen z-50 flex items-center justify-center text-xl px-10 text-center bg-black/50 backdrop-blur-xl top-0">
+        Designed and Developed for Mobile Devices! <br>
+        It's not about Responsiveness, it's about the Feature.
+    </div>
+    <div class="display yyy h-56 flex items-center justify-center w-full duration-700 relative">
+
+
+        <div
+            class="card bg-[linear-gradient(-50deg,#050505,#313131,#050505)] backdrop-blur-[5px] w-[97%] px-4 py-4 absolute   h-[14.5rem] rounded-3xl flex items-center gap-2">
+            <img src="./pngwing.com.png" alt="master-card" class="h-10 absolute right-2 bottom-4">
+            <div class="user leading-none flex flex-col gap-1 ">
+                <img src="./pngwin.png" class="h-14 w-12 absolute top-4 left-4 scale-125 rotate-90" alt="">
+                <p class="absolute top-7 opacity-20 right-7 uppercase font-semibold text-xl">Vaniiish Bank</p>
+                <p class="text-2xl tracking-wider leading-none whitespace-nowrap">xxxx xxxx xxxx <input type="number"
+                        class="bg-transparent w-14 focus:outline-none text-xl card-number" max="4" placeholder="1234"
+                        oninput="this.value = this.value.slice(0, 4)">
+                </p>
+                <p class="translate-x-10 translate-y-2 leading-none flex items-center gap-2 text-sm text-gray-400">VALID
+                    <br>THRU <input type="text" inputmode="numeric"
+                        class="bg-transparent w-14 focus:outline-none text-lg valid-thru" oninput="formatInput(this)"
+                        placeholder="00/00">
+                </p>
+                <input type="text"
+                    class="text-xl leading-none bg-transparent absolute bottom-4 w-fit focus:outline-none holder-name"
+                    placeholder="CardHolder Name"> </input>
+            </div>
+            <div class="close opacity-0 duration-300 absolute right-10 -bottom-10">
+                <i class="ri-check-double-line text-3xl z-10"></i>
+            </div>
+        </div>
+    </div>
+    <div class=" h-fit ttt  w-full py-4 flex flex-col items-center justify-center gap-2">
+        <p class="text-[11px] tracking-wider font-light text-gray-400">ENTER AMOUNT</p>
+        <div
+            class="amount text-2xl font-semibold py-3 px-5 bg-gray-700/60 rounded-full flex items-center justify-center">
+            <p>$ <span class="amount-inp">00</span></p>
+        </div>
+    </div>
+    <div class="buttons ttt  px-8 pb-4  grid gap-y-[3vh] mt-4 w-full ">
+        <div data-num="1"
+            class="button h-full w-full flex items-center  rounded-full  justify-center text-[8vw] md:text-3xl">
+            1
+        </div>
+        <div data-num="2"
+            class="button h-full w-full flex items-center  rounded-full  justify-center text-[8vw] md:text-3xl">
+            2
+        </div>
+        <div data-num="3"
+            class="button h-full w-full flex items-center  rounded-full  justify-center text-[8vw] md:text-3xl">
+            3
+        </div>
+        <div data-num="4"
+            class="button h-full w-full flex items-center  rounded-full  justify-center text-[8vw] md:text-3xl">
+            4
+        </div>
+        <div data-num="5"
+            class="button h-full w-full flex items-center  rounded-full  justify-center text-[8vw] md:text-3xl">
+            5
+        </div>
+        <div data-num="6"
+            class="button h-full w-full flex items-center  rounded-full  justify-center text-[8vw] md:text-3xl">
+            6
+        </div>
+        <div data-num="7"
+            class="button h-full w-full flex items-center  rounded-full  justify-center text-[8vw] md:text-3xl">
+            7
+        </div>
+        <div data-num="8"
+            class="button h-full w-full flex items-center  rounded-full  justify-center text-[8vw] md:text-3xl">
+            8
+        </div>
+        <div data-num="9"
+            class="button h-full w-full flex items-center  rounded-full  justify-center text-[8vw] md:text-3xl">
+            9
+        </div>
+        <div class="del h-full w-full flex  items-center  rounded-full  justify-center text-[8vw] md:text-3xl">
+            <i class="ri-delete-back-2-line"></i>
+        </div>
+        <div data-num="0"
+            class="button h-full w-full flex items-center  rounded-full  justify-center text-[8vw] md:text-3xl">
+            0
+        </div>
+        <div class="clr h-full w-full flex  items-center  rounded-full  justify-center text-[8vw] md:text-3xl">
+            C
+        </div>
+
+    </div>
+    <div class="swipe flex-col w-full h-36 p-4 flex  items-center">
+
+        <div
+            class="conter  overflow-hidden h-24 bg-black/40 rounded-full w-full flex items-center justify-start p-2 relative">
+            <div style="background-color: rgb(107, 114, 128);"
+                class="swiper z-10 h-20 w-20 flex items-center justify-center  rounded-full">
+                <div class="conttt relative w-full h-full flex items-center justify-center">
+                    <i class="init ri-arrow-right-line opacity-1 text-[40px] "></i>
+                    <div class="payed h-full w-full flex items-center opacity-0 justify-center absolute">
+                        <div
+                            class="small h-10 rounded-t-3xl rounded-br-3xl  w-2 bg-white rotate-[50deg]  translate-x-[10px] translate-y-[3px]">
+                        </div>
+                        <div
+                            class="big w-2 h-5 rounded-t-3xl rounded-bl-3xl bg-white -rotate-45  -translate-x-4 translate-y-2">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div
+                class=" hello w-full flex overflow-hidden justify-center   absolute h-8  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div class="alert flex flex-col absolute items-center w-full">
+                    <p class="texts texts-1 -z-10 text-lg ">Swipe
+                        to Confirm</p>
+                    <p class="texts-2 scale-90 -z-10 text-lg text-red-500">Fill up the Details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div
+        class="details hidden absolute  opacity-0 blur-[20px] -bottom-[35%]  bg-[linear-gradient(45deg,#333,#444)] p-5 py-6 w-[90%] rounded-3xl flex flex-col gap-2">
+        <div class=" flex items-center justify-between">
+            <h1>Card Holder </h1>
+            <p class="name">Sudip Acharya</p>
+        </div>
+        <div class=" flex items-center justify-between">
+            <h1>Card Number </h1>
+            <p">xxxx xxxx xxxx <span class="number"></span></p>
+        </div>
+        <div class=" flex items-center justify-between">
+            <h1>Payment Id </h1>
+            <p class="pay-id">4DXLQYZ3P</p>
+        </div>
+        <div class=" flex items-center justify-between">
+            <h1>Amount </h1>
+            <p>$<span class="amount-fi">271.00</span></p>
+        </div>
+        <div class=" flex items-center justify-between">
+            <h1>Payment Date </h1>
+            <p class="pay-date">19 Aug 2024</p>
+        </div>
+        <div class="powered flex items-center gap-2 ">
+            <h1>Powered by </h1>
+            <img src="pngwing.com.png" class="h-10" alt="">
+        </div>
+        <a href="/"
+            class="reload absolute w-full -ml-5 text-center text-lg py-2 mt-2 rounded-3xl bg-[#72BF20] font-semibold top-[100%]">
+            Done
+        </a>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
